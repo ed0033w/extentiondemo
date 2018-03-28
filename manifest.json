@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+
+  "name": "PageFontStyle",
+  "description": "This extension changes the font style in a specific page.",
+  "version": "1.0",
+  "default_locale": "zh_TW",
+  "icons": {
+    "128": "icon128.png",
+    "48": "icon48.png",
+    "16": "icon16.png"
+  },
+
+  "page_action": {
+    "default_icon": "icon16.png",
+    "default_popup": "popup.html",
+    "default_title": "PageFontStyle"
+  },
+
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+
+  "content_scripts":[
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": [ "jquery-3.1.0.min.js","content.js"]
+      
+    }
+  ],
+
+  "permissions": [
+    "https://www.face.com/*"
+        ]
+}
