@@ -29,8 +29,11 @@
       
     }
   ],
+  "web_accessible_resources": [
+    "myscript.js"
+  ],
 
   "permissions": [
-    "https://www.face.com/*"
+    "https://www.facebook.com/*"
         ]
 }
