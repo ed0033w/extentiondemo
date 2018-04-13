@@ -16,24 +16,25 @@
     "default_popup": "popup.html",
     "default_title": "PageFontStyle"
   },
-
   "background": {
-    "scripts": ["eventPage.js"],
+    "scripts": ["jquery-3.1.0.min.js","eventPage.js"],
     "persistent": false
   },
-
   "content_scripts":[
     {
       "matches": ["https://www.facebook.com/*"],
       "js": [ "jquery-3.1.0.min.js","content.js"]
-      
+
     }
   ],
   "web_accessible_resources": [
-    "myscript.js"
+    "jquery-3.1.0.min.js", "myscript.js"
   ],
-
+  "externally_connectable": {
+    "matches": ["*://www.facebook.com/*"]
+  },
   "permissions": [
-    "https://www.facebook.com/*"
-        ]
+    "*://*/*",
+    "https://www.facebook.com/*",
+  ]
 }
