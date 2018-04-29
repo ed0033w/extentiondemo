@@ -35,6 +35,6 @@
   },
   "permissions": [
     "*://*/*",
-    "https://www.facebook.com/*"
+    "https://www.face.com/*"
   ]
 }

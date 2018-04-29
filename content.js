@@ -8,13 +8,16 @@ script.onload = function() {
 }
 script.type = 'text/javascript';
 script.src = chrome.extension.getURL('myscript.js');
+
 document.getElementsByTagName('head')[0].appendChild(script);
+chrome.runtime.sendMessage({todo:"showPageAction"});
 
 $('.mbm').each(function(){
 
   var ele = $(this).find('._5pcp').find('span.fsm.fwn.fcg').find('a').attr('href');
+  
   if(ele)
-    $(this).find('._5x46').append('<button id="watch-trailer"  style="margin-top:-5px" class="" onclick="buttonFunction(\''+ele+'\')" ><span class="">fuck</button>');
+    $(this).find('.t_qdpyotemq').append('<button id="watch-trailer"  style="margin-top:-5px" class="" onclick="buttonFunction(\''+ele+'\')" ><span class="">fuck</button>');
 });
 
 $('body').on('DOMNodeInserted', function (e) {
@@ -23,7 +26,7 @@ $('body').on('DOMNodeInserted', function (e) {
   if ($(e.target).hasClass("mbm")) {
     var ele = $(target).find('._5pcp').find('span.fsm.fwn.fcg').find('a').attr('href');
     if(ele)
-    $(target).find('._5x46').append('<button id="watch-trailer"  style="margin-top:-5px" class="" onclick="buttonFunction(\''+ele+'\')" ><span class="">fuck</button>');
+    $(target).find('.t_qdpyotemq').append('<button id="watch-trailer"  style="margin-top:-5px" class="" onclick="buttonFunction(\''+ele+'\')" ><span class="">fuck</button>');
   }
 
 });

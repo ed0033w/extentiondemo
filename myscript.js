@@ -1,7 +1,7 @@
 var port = "";
 
 function extensionConnect(extensionId) {
-  console.log(extensionId);
+  //console.log(extensionId);
   port = chrome.runtime.connect(extensionId);
 }
 function buttonFunction(e){
