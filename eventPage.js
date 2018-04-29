@@ -1,3 +1,12 @@
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
+  if(request.todo =="showPageAction"){
+    console.log("wwww");
+    chrome.tabs.query({active:true,currentWindow: true},function(tabs){
+    chrome.pageAction.show(tabs[0].id);
+    });
+  }
+});
+
 chrome.runtime.onConnectExternal.addListener(function(port) {
   port.onMessage.addListener(function(msg) {
     console.log(msg);
@@ -16,7 +25,9 @@ chrome.runtime.onConnectExternal.addListener(function(port) {
           console.log(c);
         }
 
-
     });
+
   });
 });
+
+
