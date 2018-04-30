@@ -10,6 +10,8 @@ script.type = 'text/javascript';
 script.src = chrome.extension.getURL('myscript.js');
 document.getElementsByTagName('head')[0].appendChild(script);
 chrome.runtime.sendMessage({todo:"showPageAction"});
+//find fbuser
+
 $('.mbm').each(function(){
   //find('span.fwb.fcg') can find the post person
   var ele = $(this)/*.find('.b_1m--tzv75p')*/.find('span.fsm.fwn.fcg').find('a').attr('href');
