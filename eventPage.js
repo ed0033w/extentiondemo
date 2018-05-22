@@ -8,12 +8,13 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 });
 
 chrome.runtime.onConnectExternal.addListener(function(port) {
-  port.onMessage.addListener(function(msg) {
-    console.log(msg);
+  port.onMessage.addListener(function(info) {
+    console.log(info);
+    //console.log(voter);
     $.ajax({
       method: 'POST',
-      url: "https://fuck.com",
-      data: msg,
+      url: "https://ponder.cs.nccu.edu.tw:8080/record",
+      data: info,
         success: function(a, b, c) {
           console.log(a);
           console.log(b);
