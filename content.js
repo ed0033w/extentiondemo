@@ -21,7 +21,7 @@ $('.mbm').each(function(  ){
   
   if(ele){
   //console.log(ele);
-    $(this).find('._3x-2').append('<button id="watch-trailer"  style="margin-top:-5px" class="" onclick="buttonFunction(\''+ele+'\',\''+voter+'\')" ><span class="">fuck</button>');
+    $(this).find('._3x-2').append('<button id="vote-button"  style="margin-top:5px;  width:100%;  display: inline-block;padding: 15px 25px;font-size: 24px;cursor: pointer;text-align: center;text-decoration: none;outline: none;color: #fff;background-color: #4CAF50;border: none;" disabled="true" class="vote-button" onclick="buttonFunction(\''+ele+'\',\''+voter+'\')" ><span class="">vote1</button>');
   }
   });
 
@@ -35,7 +35,7 @@ $('body').on('DOMNodeInserted', function (e) {
     console.log("22222:"+voter);
     var ele = $(target)/*.find('.b_1m--tzv75p')*/.find('span.fsm.fwn.fcg').find('a').attr('href');
     if(ele)
-    $(target).find('._3x-2').append('<button id="watch-trailer"  style="margin-top:-5px" class="" onclick="buttonFunction(\''+ele+'\',\''+voter+'\')" ><span class="">fuck</button>');
+    $(target).find('._3x-2').append('<button id="vote"  style="margin-top:5px;  width:100%;  display: inline-block;padding: 15px 25px;font-size: 24px;cursor: pointer;text-align: center;text-decoration: none;outline: none;color: #fff;background-color: #4CAF50;border: none;"  class="vote-button" onclick="buttonFunction(\''+ele+'\',\''+voter+'\')" ><span class="">vote</button>');
   }
 
 });
