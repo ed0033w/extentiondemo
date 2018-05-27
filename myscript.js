@@ -8,7 +8,9 @@ function buttonFunction(e,voter){
     
     alert("使用者:"+voter+"\n投票文章連結:"+"www.facebook.com"+e+"\n感謝您的投票!!");
     //$(".vote-button").attr( "disabled", "disabled" );
-    
+    //$(".vote-button").attr( "disabled", "disabled" );
+    //document.getElementById("vote-button").css( "color", "red" );
+    console.log(document.getElementById("vote-button").value);
     console.log("clicked!");
     console.log(e);
     console.log(voter);
